@@ -5,7 +5,9 @@
 
 游戏很简单，跟着音乐节奏，当音符到了码农头上就把头摇起来，简直停不下来。
 
-[在线DEMO](http://aaronjan.github.io/rock-your-head/)
+[在线Demo](http://aaronjan.github.io/rock-your-head/)
+
+[项目Wiki](https://github.com/AaronJan/rock-your-head/wiki)
 
 ## 团队成员
 * [@aaronjan](https://github.com/AaronJan)
