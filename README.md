@@ -15,6 +15,10 @@
 * [@某大哥](http://www.baidu.com)
 
 ## 产品预览
-![image](https://raw.githubusercontent.com/binhe22/HackWuhan2015/master/pics/hackwuhan.png)
+![image](http://aaronjan.github.io/rock-your-head/screenshot.jpg)
 
 ## 特别感谢
+
+* [headtrackr](https://github.com/auduno/headtrackr)
+* [PandaJS](https://github.com/ekelokorpi/panda.js-engine)
+* [崔健](https://www.baidu.com/s?wd=崔健)
