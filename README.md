@@ -14,7 +14,7 @@
 * [@sured](https://github.com/sured)
 * [@vanntian](https://github.com/vanntian)
 * [@desuzh](https://github.com/desuzh)
-* [@某大哥](http://www.baidu.com)
+* [@acekingke](https://github.com/acekingke)
 
 ## 产品预览
 ![image](http://aaronjan.github.io/rock-your-head/screenshot.jpg)
