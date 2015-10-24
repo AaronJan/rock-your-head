@@ -47,27 +47,27 @@ var songNotes = {
   386: 1,
   395: 1,
   405: 1,
-  414: 1,
-  424: 1,
-  433: 1,
-  443: 1,
-  452: 1,
-  462: 1,
-  471: 1,
-  480: 1,
-  490: 1,
-  500: 1,
-  508: 1,
-  510: 1,
-  513: 1,
-  515: 1,
-  517: 1,
-  522: 1,
-  527: 1,
-  536: 1,
-  546: 1,
-  556: 1,
-  565: 1,
+  //414: 1,
+  //424: 1,
+  //433: 1,
+  //443: 1,
+  //452: 1,
+  //462: 1,
+  //471: 1,
+  //480: 1,
+  //490: 1,
+  //500: 1,
+  //508: 1,
+  //510: 1,
+  //513: 1,
+  //515: 1,
+  //517: 1,
+  //522: 1,
+  //527: 1,
+  //536: 1,
+  //546: 1,
+  //556: 1,
+  //565: 1,
 };
 
 //帧数
@@ -81,6 +81,10 @@ var score = 0;
 var lastNoding = 0;
 
 var lastShaking = 0;
+
+//用户精彩头像
+var savedImage;
+
 
 //头部移动检测封装
 (function () {
@@ -135,7 +139,7 @@ var lastShaking = 0;
       upCount   = fadeOut(upCount, 1);
       downCount = fadeOut(downCount, 1);
 
-      yMove --;
+      yMove--;
     }
 
     if (yMove > ignoreY) {
@@ -159,12 +163,21 @@ var lastShaking = 0;
 
   }, false);
 
+  function takeScreenshot () {
+    var ctx    = document.getElementById('inputCanvas').getContext('2d');
+    savedImage = ctx.getImageData(0, 0, 200, 160);
+  }
+
   function noding () {
+    takeScreenshot();
+
     console.log('noding');
     lastNoding = Date.parse(new Date());
   }
 
   function shaking () {
+    takeScreenshot();
+
     console.log('shaking');
     lastShaking = Date.parse(new Date());
   }
@@ -247,6 +260,8 @@ game.module(
       backgroundColor: 0x697bb1,
 
       init: function () {
+        game.audio.stopMusic();
+
         //分数
         this.scoreText = new game.BitmapText('', { font: 'Cartoon' });
         this.scoreText.position.set(125, 60);
@@ -278,6 +293,23 @@ game.module(
 
         //随机
         this.addTimer(400, this.spawnRandomObject.bind(this), true);
+
+        //保存精彩图片
+        setTimeout(function () {
+          var gameCanvas = document.getElementById('canvas');
+          var gameCtx = gameCanvas.getContext('2d');
+          var gameScreen = gameCtx.getImageData(0, 0, gameCanvas.width, gameCanvas.height);
+
+          var tmpCanvas = document.createElement("canvas");
+          tmpCanvas.width = 600;
+          tmpCanvas.height = 400;
+          var tmpCtx = tmpCanvas.getContext('2d');
+          tmpCtx.putImageData(gameScreen, 0, 0);
+          tmpCtx.putImageData(savedImage, 100, 100);
+          var imgDataUrl = tmpCanvas.toDataURL('image/png');
+          window.location.href = imgDataUrl;
+        }, 60);
+
       },
 
       spawnRandomObject: function () {
@@ -378,7 +410,7 @@ game.module(
         }
 
         //如果结束了
-        if (frame == 585) {
+        if (frame == 410) {
           game.system.setScene('End');
         }
 
