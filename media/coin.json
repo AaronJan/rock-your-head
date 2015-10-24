@@ -1,0 +1,60 @@
+{"frames": {
+
+"coin-gold-01.png":
+{
+	"frame": {"x":0,"y":0,"w":64,"h":66},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":66},
+	"sourceSize": {"w":64,"h":66}
+},
+"coin-gold-02.png":
+{
+	"frame": {"x":66,"y":0,"w":64,"h":66},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":66},
+	"sourceSize": {"w":64,"h":66}
+},
+"coin-gold-03.png":
+{
+	"frame": {"x":132,"y":0,"w":64,"h":66},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":66},
+	"sourceSize": {"w":64,"h":66}
+},
+"coin-gold-04.png":
+{
+	"frame": {"x":0,"y":68,"w":64,"h":66},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":66},
+	"sourceSize": {"w":64,"h":66}
+},
+"coin-gold-05.png":
+{
+	"frame": {"x":66,"y":68,"w":64,"h":66},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":66},
+	"sourceSize": {"w":64,"h":66}
+},
+"coin-gold-06.png":
+{
+	"frame": {"x":132,"y":68,"w":64,"h":66},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":66},
+	"sourceSize": {"w":64,"h":66}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker ",
+	"version": "1.0",
+	"image": "coin.png",
+	"format": "RGBA8888",
+	"size": {"w":198,"h":134},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:2d1f1cf57687a8147037ce93f337bcfb:1/1$"
+}
+}

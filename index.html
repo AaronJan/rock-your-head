@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>Flying Dog</title>
+
+    <script type="text/javascript" src="src/head/headtrackr.js"></script>
+    <script type="text/javascript" src="src/game/config.js"></script>
+    <script type="text/javascript" src="src/engine/core.js"></script>
+    <script type="text/javascript" src="src/game/main.js"></script>
+
+    <style>
+        #inputVideo {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: 99;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="inputCanvas" width="200" height="160" style="display:none"></canvas>
+    <video id="inputVideo" autoplay loop></video>
+
+    <script type="text/javascript">
+        var videoInput = document.getElementById('inputVideo');
+        var canvasInput = document.getElementById('inputCanvas');
+
+        var htracker = new headtrackr.Tracker();
+        htracker.init(videoInput, canvasInput);
+        htracker.start();
+    </script>
+</body>
+</html>
